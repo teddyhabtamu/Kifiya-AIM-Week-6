@@ -66,26 +66,66 @@ The dataset for this project is provided by the eCommerce platform and contains 
 7. **Outlier Detection:**
    - Use box plots to identify outliers in numerical features.
 
-### Task 3 - Model Development
+### Task 3 - Feature Engineering
 
-1. **Define Proxy Variable:**
-   - Define a proxy variable to categorize users as high risk (bad) or low risk (good).
+1. **Create Aggregate Features:**
+   - Total Transaction Amount: Sum of all transaction amounts for each customer.
+   - Average Transaction Amount: Average transaction amount per customer.
+   - Transaction Count: Number of transactions per customer.
+   - Standard Deviation of Transaction Amounts: Variability of transaction amounts per customer.
 
-2. **Feature Selection:**
-   - Select observable features that are good predictors of the default variable.
+2. **Extract Features:**
+   - Transaction Hour: The hour of the day when the transaction occurred.
+   - Transaction Day: The day of the month when the transaction occurred.
+   - Transaction Month: The month when the transaction occurred.
+   - Transaction Year: The year when the transaction occurred.
 
-3. **Risk Probability Model:**
-   - Develop a model that assigns risk probability for a new customer.
+3. **Encode Categorical Variables:**
+   - Convert categorical variables into numerical format using One-Hot Encoding and Label Encoding.
 
-4. **Credit Score Model:**
-   - Develop a model that assigns credit score from risk probability estimates.
+4. **Handle Missing Values:**
+   - Use imputation or removal to handle missing values.
 
-5. **Optimal Loan Model:**
-   - Develop a model that predicts the optimal amount and duration of the loan.
+5. **Normalize/Standardize Numerical Features:**
+   - Normalize or standardize numerical features to bring them onto a similar scale.
+
+### Task 4 - Default Estimator and WoE Binning
+
+1. **Construct a Default Estimator (Proxy):**
+   - Visualize all transactions in the RFMS space and establish a boundary to classify users as high and low RFMS scores.
+   - Assign all users the good and bad label.
+
+2. **Perform Weight of Evidence (WoE) Binning:**
+   - Use WoE binning to transform the features.
+
+### Task 5 - Modelling
+
+1. **Model Selection and Training:**
+   - Split the data into training and testing sets.
+   - Choose at least two models from Logistic Regression, Decision Trees, Random Forest, and Gradient Boosting Machines (GBM).
+   - Train the models on the training data.
+
+2. **Hyperparameter Tuning:**
+   - Improve model performance using hyperparameter tuning techniques like Grid Search and Random Search.
+
+3. **Model Evaluation:**
+   - Assess model performance using metrics such as Accuracy, Precision, Recall, F1 Score, and ROC-AUC.
+
+### Task 6 - Model Serving API Call
+
+1. **Create a REST API:**
+   - Choose a suitable framework for building REST APIs (e.g., FastAPI).
+   - Load the trained machine-learning model.
+   - Define API endpoints that accept input data and return predictions.
+   - Implement logic to receive input data, preprocess it, and make predictions using the loaded model.
+   - Format the predictions and return them as a response to the API call.
+
+2. **Deployment:**
+   - Deploy the API to a web server or cloud platform.
 
 ## How to Run the Project
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-repo/credit-scoring-model.git
-   cd credit-scoring-model
+   git clone https://github.com/Kifiya-AIM-Week-6.git
+   cd Kifiya-AIM-Week-6
