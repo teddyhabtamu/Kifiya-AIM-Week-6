@@ -127,5 +127,5 @@ The dataset for this project is provided by the eCommerce platform and contains 
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/Kifiya-AIM-Week-6.git
+   git clone https://github.com/teddyhabtamu/Kifiya-AIM-Week-6.git
    cd Kifiya-AIM-Week-6
